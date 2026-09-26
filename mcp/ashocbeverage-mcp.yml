@@ -1,0 +1,8 @@
+generated: 2026-09-26
+method: probed
+source: https://www.drinkaccelerator.com/.well-known/ucp
+deployment:
+  mode: remote
+  endpoint: https://a-shoc.myshopify.com/api/ucp/mcp
+  auth: none
+  verified: probed

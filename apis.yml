@@ -1,23 +1,84 @@
 aid: ashocbeverage
+
 name: Ashocbeverage
-description: 'Ashocbeverage is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: Ashocbeverage is a modern energy drink brand offering a range of performance‑focused beverages such as SHOC Accelerator, SHOC Frozen
+  Ice, and SHOC Fruit Punch. The brand is marketed through the Drink Accelerator online store, featuring product pages, a blog, and a privacy
+  policy. It targets active consumers seeking natural caffeine blends and is distributed via major retailers.
+
+image: https://www.drinkaccelerator.com/assets/logo.png
+
+website: https://www.drinkaccelerator.com
+
 url: https://raw.githubusercontent.com/api-evangelist/ashocbeverage/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
 - Company
-apis: []
+- EnergyDrink
+- Beverage
+- Health
+- Lifestyle
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: LLMsTxt
+  url: llms/ashocbeverage-llms.txt
+- type: MCPServer
+  url: mcp/ashocbeverage-mcp.yml
+- type: WellKnown
+  url: well-known/ashocbeverage-well-known.yml
+- type: Hosts
+  url: hosts/ashocbeverage-hosts.yml
+- type: Vendors
+  url: vendors/ashocbeverage-vendors.yml
+- type: Newsroom
+  url: https://www.drinkaccelerator.com/blogs/news
+- type: DomainSecurity
+  url: security/ashocbeverage-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/ashocbeverage
+  url: https://www.drinkaccelerator.com
+- type: Documentation
+  url: https://www.drinkaccelerator.com/pages/about-us
+- type: Blog
+  url: https://www.drinkaccelerator.com/pages/newsletter
+- type: PrivacyPolicy
+  url: https://www.drinkaccelerator.com/pages/privacy-policy_
+
+apis:
+- name: Ashocbeverage API
+  description: API documented on the Drink Accelerator site, but no owned machine‑readable contract could be verified.
+  humanURL: https://www.drinkaccelerator.com/pages/about-us
+  baseURL: null
+  x-coverage:
+    state: unreadable
+    reason: js-rendered-docs
+    detail: GraphQL endpoint returned a generic Shopify schema, not specific to Ashocbeverage.
+    evidence:
+    - url: https://www.drinkaccelerator.com/api/graphql
+      status: 200
+    checked: 2026-09-26
+  aid: ashocbeverage:ashocbeverage-api
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 9
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
